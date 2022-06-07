@@ -66,6 +66,7 @@ class Bird {
   render() {
     if (this.countDown > 0) this.countDown--;
 
+    // flaping block
     if (this.state.screen.inGame || this.state.screen.mainSreen) {
       this.countFrame++;
 
@@ -77,6 +78,7 @@ class Bird {
       }
     }
 
+    // rotate
     if (this.state.screen.inGame || this.state.screen.endGame) {
       this.ctx.save();
       this.ctx.translate(this.x + this.birdImg.width / 2, this.y);
@@ -102,6 +104,8 @@ class Bird {
       this.ctx.drawImage(this.birdImg, this.x, this.y);
     }
   }
+
+  renderChillingBird() {}
 
   update() {
     if (

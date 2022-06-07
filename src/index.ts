@@ -68,7 +68,6 @@ let loop = (): void => {
   const time: number = window.performance.now();
   const delta: number = time - lastTime;
 
-  input(state);
   birdgame.render();
   birdgame.update();
 
@@ -78,4 +77,5 @@ let loop = (): void => {
   rAF_ID = requestAnimationFrame(loop);
 };
 
+input(state);
 rAF_ID = requestAnimationFrame(loop);

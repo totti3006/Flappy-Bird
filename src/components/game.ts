@@ -52,8 +52,8 @@ class Game {
         for (let pipe of this.pipes) {
           pipe.render();
         }
-        this.score.render();
       }
+      this.score.render();
       if (this.state.screen.endGame) {
         this.ctx.drawImage(this.gameOver, 48, this.state.height / 4);
         this.ctx.font = "30px Arial";
@@ -102,6 +102,8 @@ class Game {
         -this.pipes[this.pipes.length - 1].getWidth()
       )
         this.pipes.pop();
+
+      console.log(this.pipes.length);
 
       if (this.state.spaceDown) {
         this.bird.jump();
